@@ -27,7 +27,8 @@ An early personal website build — profile header, navigation sidebar, skills t
 
 **Screenshot:**
 
-<!-- PASTE SCREENSHOT HERE -->
+![Personal Portfolio Site](photos/website.png)
+![Personal Portfolio Site - Contact Form](photos/website_1.png)
 
 ---
 
@@ -40,14 +41,14 @@ Five boxes arranged in an irregular grid using named areas and empty cells (`.`)
 
 **Screenshot:**
 
-<!-- PASTE SCREENSHOT HERE -->
+![Grid Asymmetric Boxes](photos/grid-asymmetric-boxes.png)
 
 ### `grid-dashboard-layout`
 A classic header/sidebar/main/footer page structure using CSS Grid.
 
 **Screenshot:**
 
-<!-- PASTE SCREENSHOT HERE -->
+![Grid Dashboard Layout](photos/grid-dashboard-layout.png)
 
 ---
 
@@ -60,14 +61,15 @@ Teal header with logo, cream sidebar navigation, light-blue course cards.
 
 **Screenshot:**
 
-<!-- PASTE SCREENSHOT HERE -->
+![Course Dashboard KSBL](photos/course-dashboard-ksbl.png)
 
 ### `course-sidebar-hover-demo`
 Brown header, aquamarine sidebar with red nav buttons, yellow course cards with hover states.
 
 **Screenshot:**
 
-<!-- PASTE SCREENSHOT HERE -->
+![Course Sidebar Hover Demo](photos/course-sidebar-hover-demo.png)
+![Course Sidebar Hover Demo - Hover State](photos/course-sidebar-hover-demo_1.png)
 
 ---
 
@@ -87,7 +89,8 @@ A live CSS playground — sliders and color pickers control a box's background, 
 
 **Screenshot:**
 
-<!-- PASTE SCREENSHOT HERE -->
+![Interactive CSS Styler](photos/interactive-css-styler.png)
+![Interactive CSS Styler - Controls](photos/interactive-css-styler_1.png)
 
 ### `button-color-toggle`
 A single button that cycles through three background colors on click.
@@ -104,7 +107,7 @@ A single button that cycles through three background colors on click.
 
 **Screenshot:**
 
-<!-- PASTE SCREENSHOT HERE -->
+![Photo Gallery Carousel](photos/photo-gallery-carousel.png)
 
 ---
 
@@ -122,7 +125,7 @@ An expanded photo gallery (23 images) with a category filter sidebar (Cars, Bike
 
 **Screenshot:**
 
-<!-- PASTE SCREENSHOT HERE -->
+![Photo Gallery Filterable](photos/photo-gallery-filterable.png)
 
 ---
 
@@ -132,7 +135,7 @@ A 5-box diamond-pattern layout. Clicking the **Click** button advances a highlig
 
 **Screenshot:**
 
-<!-- PASTE SCREENSHOT HERE -->
+![Quiz](photos/quiz.png)
 
 ---
 
