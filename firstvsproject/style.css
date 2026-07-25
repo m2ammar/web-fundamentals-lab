@@ -1,0 +1,66 @@
+body{
+     background-image: url(4ccbe924632405a779452545f5a50a6e.jpg);
+}
+
+h1, p {
+    background-color: aliceblue;
+    color: rgb(128, 161, 63);
+}
+
+p {
+    color: rgb(122, 226, 43);
+}
+p:hover{
+    background-color: aqua;
+    color: black;
+
+}
+.myhead {
+    padding: 0px 0px 0px 20px;
+}
+#mypara{
+    padding: 20px;
+}
+.myanchor{
+    background-color: chartreuse;
+    color:white;
+}
+.mydiv{
+ background-image: url(download\ \(3\).jpg);
+    border: 1px solid black;
+    #mypara:hover{
+    background-color: beige;
+    color:black;
+
+
+}
+}
+/*p.mudivpara:hover{
+    
+background-color: blue;
+    color: white;}*/
+/*.mytable{
+    border: 1px solid black;
+    border-color: white;
+    color: white;
+    border-collapse: collapse;
+}*/
+table{
+   /*border: 2px solid black;*/
+    border-collapse: collapse;
+    background-color: aliceblue;
+    
+}
+th,td{
+    
+   /* border: 1px solid black;*/
+    padding: 10px;
+    text-align: center;
+    border-bottom: 2px solid black;
+}
+.mytable2{
+
+        padding: 10px;
+    text-align: center;
+    border-bottom: 2px solid black;
+}

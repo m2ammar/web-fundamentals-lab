@@ -1,0 +1,74 @@
+h1{
+    background-color: brown;
+    text-align: center;
+    padding: 50px;
+    margin: 20px;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+        "sidebar main"
+        "sidebar main"
+        "footer footer";
+    min-height: 100vh; /* container grows with content */
+}
+
+.sidebar{
+    grid-area: sidebar;
+    background-color: aquamarine;
+}
+
+.sidebar ul{
+     list-style: none;  /* no bullets point */
+     padding: 5px;
+}
+
+.sidebar li{
+    margin: 15px;
+    border-radius: 10px;
+}
+
+.sidebar a{
+      text-decoration: none;   /*underline */
+     display: block;
+     padding: 10px;
+     color: blueviolet;
+     text-align: center;
+     background-color: red;
+     border: 2px solid gray;
+     border-radius: 10px;
+}
+
+.sidebar a:hover{
+    background-color: black;
+    color: aliceblue;
+}
+
+.main{
+    grid-area: main;
+    padding: 20px;
+}
+
+.course1, .course2, .course3{
+    background-color: yellow;
+    padding: 15px;
+    margin: 10px 0;
+    box-shadow: 5px 5px 10px pink;
+    border-radius: 5px;
+}
+
+.course1:hover, .course2:hover, .course3:hover{
+    background-color: aqua;
+}
+
+.footer {
+    grid-area: footer; 
+    background-color: bisque;
+    padding: 10px;
+    text-align: center;
+    color: blue;
+    margin-top: 10px;
+}

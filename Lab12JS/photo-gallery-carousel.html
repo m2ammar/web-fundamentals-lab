@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Gallery</title>
+    <link rel="stylesheet" href="photo-gallery-carousel.css">
+</head>
+<body>
+    <div class="page">
+    <div class="Header">
+        <img src="image/pic2 new.jpg" placeholder="logo" width="40" height="40">
+        <h1>Professional Photo Gallery</h1>
+        <p>Welcome, User!</p>
+    </div>
+
+    <div class="container">
+        <div class="sidebar">
+            <h2> Navigation Menu</h2>
+
+            <ul>
+                <li>Home</li>
+                <li>Image Gallery</li>
+                <li>About Us</li>
+                <li>Services</li>
+                <li>Contact</li>
+            </ul>
+        </div>
+        
+        <div class="menu">
+            <h2>Featured Photographs</h2>
+            <div class="featured-box">
+
+    <div class="image-box">
+        <button id="prev" class="prev-btn">‹ Previous</button>
+        <img id="photo" src="" alt="photo">
+    </div>
+
+    <div class="content-box">
+        <h3 id="title"></h3>
+        <p id="description"></p>
+        <button id="next" class="next-btn">Next ›</button>
+    </div>
+
+</div>
+
+<p id="counter" class="counter"></p>
+
+
+        </div>
+        </div>
+        <footer class="footer">© 2024 Professional Phtoto Gallery. All rights reserved</footer>
+    
+    </div>
+
+   <script>
+let photos = [
+    {
+        src: "image/flowers.jpeg",
+        title: "Golden Silence",
+        desc: "A young girl stands bathed in the golden glow of the sunset"+
+               "Her silhouette blends softly with the warm hues of the sky."+
+               "The gentle breeze whispers through the surrounding nature."+
+               "A serene moment, where time feels calm and endless."
+    },
+    {
+        src: "image/pic2 new.jpg",
+        title: "Whispers of the Wild",
+        desc: "Lush greenery stretches endlessly under a clear sky"+
+               "Sunlight dances on leaves, painting the earth with gold"+
+               "Birds and flowers mingle in a symphony of life"+
+               "Nature’s beauty breathes peace into every wandering soul."
+    },
+    {
+        src: "image/pic3.jpg",
+        title: "Village Sentinel",
+        desc: "An old tree stretches its branches under the open sky."+
+              "Nestled in the heart of a quiet village, it watches over all."+
+              "The sunlight filters through its leaves, casting playful shadows."+
+              "A symbol of life, peace, and enduring presence in nature"
+    },
+    {
+        src:"image/butterfly.jpeg",
+        title:"Butterfly",
+        desc: "A gentle dance on the breeze, colors bright and free,"+
+              " Wings painted with the whispers of nature’s melody."+
+              " Delicate yet bold, it flutters through the sunlit air,"+
+              " A fleeting moment of beauty beyond compare."
+    },
+    {
+        src:"image/flowers.jpeg",
+        title:"Flowers",
+        desc: "A gentle dance on the breeze, colors bright and free,"+
+              " Wings painted with the whispers of nature’s melody."+
+              " Delicate yet bold, it flutters through the sunlit air,"+
+              " A fleeting moment of beauty beyond compare."
+    },
+    {
+        src:"image/panda.jpeg",
+        title:"Panda",
+        desc: "A gentle dance on the breeze, colors bright and free,"+
+              " Wings painted with the whispers of nature’s melody."+
+              " Delicate yet bold, it flutters through the sunlit air,"+
+              " A fleeting moment of beauty beyond compare."
+    },
+    {
+        src:"image/puppies.jpeg",
+        title:"Puppies",
+        desc: "A gentle dance on the breeze, colors bright and free,"+
+              " Wings painted with the whispers of nature’s melody."+
+              " Delicate yet bold, it flutters through the sunlit air,"+
+              " A fleeting moment of beauty beyond compare."
+    },
+    {
+        src:"image/sky.jpeg",
+        title:"Beautiful Sky",
+        desc: "Lush greenery stretches endlessly under a clear sky"+
+               "Sunlight dances on leaves, painting the earth with gold"+
+               "Birds and flowers mingle in a symphony of life"+
+               "Nature’s beauty breathes peace into every wandering soul."
+    },
+    {
+        src:"image/stairs.webp",
+        title:"Nature Beauty",
+        desc: "A gentle dance on the breeze, colors bright and free,"+
+              " Wings painted with the whispers of nature’s melody."+
+              " Delicate yet bold, it flutters through the sunlit air,"+
+              " A fleeting moment of beauty beyond compare."
+    },
+    {
+        src:"image/tiger.jpeg",
+        title:"Tiger",
+        desc: "Lush greenery stretches endlessly under a clear sky"+
+               "Sunlight dances on leaves, painting the earth with gold"+
+               "Birds and flowers mingle in a symphony of life"+
+               "Nature’s beauty breathes peace into every wandering soul."
+    }
+];
+
+let index = 0;
+
+let photo = document.getElementById("photo");
+let title = document.getElementById("title");
+let description = document.getElementById("description");
+let counter = document.getElementById("counter");
+
+let nextBtn = document.getElementById("next");
+let prevBtn = document.getElementById("prev");
+
+nextBtn.onclick = function () {
+    index = (index + 1) % photos.length;
+    update();
+};
+
+prevBtn.onclick = function () {
+    index = (index - 1 + photos.length) % photos.length;
+    update();
+};
+
+function update() {
+    photo.src = photos[index].src;
+    title.innerText = photos[index].title;
+    description.innerText = photos[index].desc;
+    counter.innerText = "Image " + (index + 1) + " of " + photos.length;
+}
+
+update();
+</script>
+
+</body>
+</html>

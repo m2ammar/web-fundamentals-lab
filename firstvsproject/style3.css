@@ -1,0 +1,30 @@
+body{
+
+    background-color: aqua;
+}
+h1{
+    text-align: center;
+    padding: 5px;
+    margin: auto;
+}
+#contactMe{
+    padding: 4px;
+    margin:auto;
+    background-color:brown;
+    border: 3px solid blue;
+
+}
+#contactMe:hover{
+    text-align: center;
+   cursor: pointer;
+    color: bisque;
+}
+#getInTouch{
+    color: azure;
+}
+getInTouch:hover{
+    background-color: saddlebrown;
+    border-radius: 5px;
+    padding: 0 5px;
+    cursor: pointer;
+}

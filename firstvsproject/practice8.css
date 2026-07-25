@@ -1,0 +1,55 @@
+body{
+    background-color: aliceblue;
+}
+.myclass h2{
+ border: none;
+ background-color: bisque;
+ color: springgreen;
+}
+.myclass p{
+    background-color: aquamarine;
+    color: blue;
+    border: none;
+    padding: 20px;
+}
+.myclass p:hover{
+    background-color: darkred;
+    color: black;
+}
+.google{
+    background-color: beige;
+    border: none;
+    color: blueviolet;
+    padding: 5px;
+}
+.google:hover{
+    background-color: chocolate;
+    color: black;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 5px;
+}
+.mydiv{
+    margin-top: 5px;
+    border: 1px solid black;
+}
+.mydiv p{
+    background-color: bisque;
+    border: none;
+    padding: 20px;
+}
+.mydiv p:hover{
+    background-color: dimgrey;
+    color: aliceblue;
+}
+table{
+    background-color: beige;
+    border-bottom: 2px solid black;
+    padding: 15px;
+    margin: 10px;
+    border-collapse: collapse;
+}
+tr, th, td{
+    border-bottom: 2px solid black;
+    padding: 10px;
+}

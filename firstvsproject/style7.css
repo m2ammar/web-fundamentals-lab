@@ -1,0 +1,44 @@
+body{
+    justify-content: space-evenly;
+    padding: 0%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+.myanchor{
+    display: flex;
+    background-color: aliceblue;
+    align-items: center;
+    flex-direction: column; /*means column wise as matrix column */
+    border-radius: 5px;
+}
+.myanchor img{
+   
+    border: none;
+    border-radius: 15 px;
+    padding: 10px 0;
+}
+.myanchor h1{
+    color: brown;
+    padding: 5px 10px;
+    margin: 5px;
+    
+}
+.myanchor p{
+    padding: 5px 10px;
+    margin: 10px;
+    
+}
+.myanchor button{
+    background-color: black;
+    color: bisque;
+    border: none;
+    border-radius: 3px;
+    padding: 5px 10px;
+    margin-bottom: 5px;
+   
+
+}
+.myanchor button:hover{
+    background-color:saddlebrown;
+}

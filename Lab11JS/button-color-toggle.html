@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: brown;
+        }
+        button{
+            padding: 20px 30px;
+            font-size: large;
+            background-color: black;
+            border: none;
+            border-radius: 5px;
+            color: aqua;
+        }
+        button:hover{
+            background-color: blanchedalmond;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <button id="colorButton" onClick="changeColor()">Click</button>
+
+     <script>
+        function changeColor() {
+            const button = document.getElementById("colorButton");
+            
+            // Beginner-friendly: toggle between 3 colors
+            if(button.style.backgroundColor == "black") {
+                button.style.backgroundColor = "red";
+            } else if(button.style.backgroundColor == "red") {
+                button.style.backgroundColor = "green";
+            } else {
+                button.style.backgroundColor = "black";
+            }
+        }
+
+    </script>
+</body>
+</html>

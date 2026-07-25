@@ -1,0 +1,15 @@
+body{
+    border: 5px solid whitesmoke;
+    border-radius: 5px;
+    background-color: aliceblue;
+}
+#contactme{
+    background-color: dodgerblue;
+    border-radius: 5px;
+    text-align: center;
+    padding: 10px 5px;
+}
+#contactme:hover{
+    background-color: antiquewhite;
+    cursor: pointer;
+}

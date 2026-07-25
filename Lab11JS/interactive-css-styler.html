@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Interactive CSS Styler</title>
+    <link rel="stylesheet" href="interactive-css-styler.css">
+</head>
+<body>
+
+    <h1>Interactive CSS Styler</h1>
+
+    <div id="demoBox"></div>
+
+    <div class="controlBox">
+
+        <label>Background Color:</label>
+        <input type="color" id="bgPicker" value="#E8F1F2" oninput="applyChanges()">
+
+        <label>Border Color:</label>
+        <input type="color" id="edgeColor" value="#1B2A41" oninput="applyChanges()">
+
+        <label>Shadow Color:</label>
+        <input type="color" id="glowColor" value="#7A9E9F" oninput="applyChanges()">
+
+        <label>Border Width (1–20px):</label>
+        <input type="range" min="1" max="20" id="edgeSize" value="2" oninput="applyChanges()">
+
+        <label>Border Radius (0–100px):</label>
+        <input type="range" min="0" max="100" id="roundness" value="20" oninput="applyChanges()">
+
+        <label>Width (100–400px):</label>
+        <input type="range" min="100" max="400" id="wControl" value="200" oninput="applyChanges()">
+
+        <label>Height (100–400px):</label>
+        <input type="range" min="100" max="400" id="hControl" value="200" oninput="applyChanges()">
+
+        <label>Shadow Size (0–50px):</label>
+        <input type="range" min="0" max="50" id="glowSize" value="10" oninput="applyChanges()">
+
+        <button onclick="resetBox()">Reset to Default</button>
+
+    </div>
+
+    <script>
+        function applyChanges() {
+            let box = document.getElementById("demoBox");
+
+            let bg = document.getElementById("bgPicker").value;
+            let bColor = document.getElementById("edgeColor").value;
+            let shadowColor = document.getElementById("glowColor").value;
+            
+            let bWidth = document.getElementById("edgeSize").value;
+            let radius = document.getElementById("roundness").value;
+            let width = document.getElementById("wControl").value;
+            let height = document.getElementById("hControl").value;
+            let shadowSize = document.getElementById("glowSize").value;
+
+            box.style.backgroundColor = bg;
+            box.style.borderColor = bColor;
+            box.style.borderWidth = bWidth + "px";
+            box.style.borderRadius = radius + "px";
+            box.style.width = width + "px";
+            box.style.height = height + "px";
+
+            if (shadowSize > 0) {
+                box.style.boxShadow = "5px 5px " + shadowSize + "px " + shadowColor;
+            } else {
+                box.style.boxShadow = "none";
+            }
+        }
+
+        function resetBox() {
+            document.getElementById("bgPicker").value = "#E8F1F2";
+            document.getElementById("edgeColor").value = "#1B2A41";
+            document.getElementById("glowColor").value = "#7A9E9F";
+            document.getElementById("edgeSize").value = "2";
+            document.getElementById("roundness").value = "20";
+            document.getElementById("wControl").value = "200";
+            document.getElementById("hControl").value = "200";
+            document.getElementById("glowSize").value = "10";
+
+            applyChanges();
+        }
+
+        window.onload = applyChanges;
+    </script>
+
+</body>
+</html>

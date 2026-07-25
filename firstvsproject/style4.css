@@ -1,0 +1,62 @@
+body{
+    background-color: darkred;
+}
+.container{
+    gap: 20px;
+    display: flex;
+    padding: 5px;
+    margin: auto;
+}
+.sidebar{
+    flex: 1;
+    background-color: aquamarine;
+    text-align: left;
+    padding-right: 5px;
+    margin: auto;
+    border-radius: 5px;
+}
+.content{
+    flex: 3;
+    background-color: white;
+    padding: 10px;
+    margin: auto;
+    border-radius: 5px;
+}
+#contact{
+    background-color: blue;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#contact:hover{
+    background-color: bisque;
+    border: 1px solid yellow;
+    cursor: pointer;
+}
+h1{
+    text-align: center;
+    padding: 10px;
+}
+table{
+    border-radius: 5px;
+    background-color: navy;
+    border: 4px solid black;
+    border-collapse: collapse;
+
+}
+th,td{
+    text-align: center;
+    padding: 10px;
+    border: 2px solid black;
+}
+#getInTouch{
+    background-color: blueviolet;
+    border: 5px solid white;
+    padding: 5px;
+
+}
+#getInTouch:hover{
+    cursor: pointer;
+    background-color: hotpink;
+    padding: 10px; 
+    
+}

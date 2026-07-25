@@ -1,0 +1,144 @@
+body{
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+}
+.page{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.Header{
+    background-color: blue;
+    color: aliceblue;
+    display: flex;
+    align-items: center;
+
+}
+.Header image{
+    border: none;
+    align-items: start;
+
+}
+.Header img{
+    border-radius: 30px;
+    padding:10px ;
+}
+.Header h1{
+    padding-left: 10px;
+    margin-right: 10px;
+}
+.Header p{
+    margin-left: auto;
+    margin-right: 15px;
+    
+}
+.container{
+    display: flex;
+    gap: 20px;
+    flex:1;
+    
+}
+.sidebar{
+    flex: 1;
+    border-right: 5px solid lightgrey;
+}
+.sidebar h2{
+   
+    color: blue;
+    font-weight: 100px;
+    border-bottom: 4px solid lightblue;
+    margin: 10px;
+    border-radius: 2px;
+    font-family: sans-serif;
+    padding: 20px 30px;
+}
+.sidebar ul{
+    padding: 0;
+    margin: 0;
+}
+.sidebar li{
+    text-align: left;
+    border-bottom: dotted gray 2px ;
+    /* margin: 15px; */
+    list-style: none;
+    padding: 10px 20px;
+    font-weight: 100px;
+    font-family: sans-serif;
+}
+.sidebar li:hover{
+    background-color: gray;
+    border-radius: 5px ;
+    color: aqua;
+}
+.menu {
+    flex: 4;
+}
+.menu h2{
+    padding-top: 30px;
+    color: blue;
+    font-weight: 200px;
+    font-family: sans-serif;
+    padding-left: 10px;
+}
+.featured-box{
+    display: flex;
+    background-color: #eaf6ff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    gap: 20px;
+}
+
+.image-box{
+    position: relative;
+}
+
+.image-box img{
+    width: 300px;
+    height: 200px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.prev-btn{
+    position: absolute;
+    left: 0;
+    top: 45%;
+    background-color: #1e90ff;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.content-box h3{
+    color: #1e90ff;
+    margin-bottom: 10px;
+}
+
+.next-btn{
+    margin-top: 15px;
+    background-color: #1e90ff;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.counter{
+    margin-top: 10px;
+    font-weight: bold;
+    color: #1e90ff;
+}
+
+.footer{
+   
+    background-color: blue;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    
+}

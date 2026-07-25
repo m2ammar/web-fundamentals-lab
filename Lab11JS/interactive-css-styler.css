@@ -1,0 +1,75 @@
+body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            color: #1B2A41;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-family: "Sitka Heading", serif; 
+            font-weight: 600; 
+            font-size: 55px; 
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px; 
+            font-family: "Sitka Heading", serif; 
+            font-weight: 600; /*how thick and bold text appears */
+            font-size: 20px; 
+        }
+       
+        #demoBox {
+            width: 200px;
+            height: 200px;
+            background-color: #E8F1F2;
+            border: 2px solid #1B2A41;
+            margin: 20px auto;
+            border-radius: 10px;
+            transition: all 0.2s ease;  /*change = the new value applied to a CSS property. */
+        }
+       
+        .controlBox {
+            width: 450px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 2px solid #999;
+            background-color: #f3f6f7;
+            border-radius: 12px;
+        }
+
+        input[type="color"] {
+            width: 100%;
+            height: 40px;
+            border: 2px solid black;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-bottom: 20px;
+        }
+        
+        input[type="range"] {
+            width: 100%;
+            margin-bottom: 20px;
+            cursor: pointer;
+            accent-color: #1B2A41; 
+        }
+        
+        button {
+            width: 100%;
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #1B2A41; 
+            color: #E8F1F2;
+            font-size: 18px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            font-family: "Sitka Heading", serif; 
+            font-weight: 600;
+        }
+
+        button:hover {
+            background-color: #24344D; 
+        }

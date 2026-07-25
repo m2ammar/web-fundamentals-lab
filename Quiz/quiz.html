@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="quiz.css">
+
+</head>
+<body>
+    <div class="quiz-card">
+    <h1>Quiz</h1>
+    
+    <div class="grid-container">
+        <div class="box gray" id="box1"></div>
+        <div></div> <div class="box blue" id="box4"></div>
+        
+        <div></div>
+        <div class="box blue" id="box5"></div>
+        <div></div>
+        
+        <div class="box blue" id="box2"></div>
+        <div></div>
+        <div class="box blue" id="box3"></div>
+    </div>
+
+    <button id="clickBtn">Click</button>
+</div>
+
+    <script>
+   
+const box1 = document.getElementById('box1'); 
+const box2 = document.getElementById('box2'); 
+const box3 = document.getElementById('box3'); 
+const box4 = document.getElementById('box4'); 
+const box5 = document.getElementById('box5'); 
+
+const sequence = [box1, box2, box3, box4, box5];
+let currentIndex = 0;
+
+const btn = document.getElementById('clickBtn');
+
+btn.addEventListener('click', () => {
+    
+    // Reset current box to blue
+    sequence[currentIndex].classList.remove('gray');
+    sequence[currentIndex].classList.add('blue');
+
+    // Move to next (1 -> 2 -> 3 -> 4 -> 5 -> repeat)
+    currentIndex = (currentIndex + 1) % sequence.length;
+
+    //Set new box to gray
+    sequence[currentIndex].classList.remove('blue');
+    sequence[currentIndex].classList.add('gray');
+});
+    </script>
+    </div>
+</body>
+</html>

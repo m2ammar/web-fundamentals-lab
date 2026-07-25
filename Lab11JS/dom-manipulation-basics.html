@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 11</title>
+</head>
+<body>
+    <h2 id="h">This Lab is for JavaScript</h2>
+    <p id="para">This is Paragraph</p>
+    <button onclick="myfunction()">Click to change text in paragraph</button> 
+    <button onclick="changeColor()">Click to change background color to black</button>
+    <button onclick="changeColor2()">Click to change background color to red</button> 
+
+    <!-- when button pressed calling this function(MEthod) myfunc... -->
+     <button onclick="changeColor3()">Apply</button>
+    <input type="color" id="colorpicker">
+
+  <div id="mydiv">This is div</div>
+
+<!-- Range for Width -->
+<input type="range" id="rangeWidth" min="50" max="400" value="150">
+
+<!-- Range for Height -->
+<input type="range" id="rangeHeight" min="50" max="400" value="150">
+
+<button onclick="applySize()">Apply</button>
+
+<style>
+    #mydiv{
+        background-color: lightblue;
+        padding: 20px;
+        margin-top: 20px;
+        box-shadow: 0 0 15px rgba(0,0,0,0.4); /* shadow added */
+    }
+</style>
+
+
+      
+    <script>
+        //  appy colors
+         function myfunction(){ //method
+            // document.getElementById("para").innerHTML = "Paragraph has been changed";
+            let mypara= document.getElementById("para");  //made object to store the para
+            mypara.innerHTML="Paragraph has been changed"; //method
+            //  we make it bcz now we just need to call an object not entire line
+            mypara.style.color="black";
+        }
+
+        //  apply colr by button by inserting
+        function changeColor3(){
+            let color=document.getElementById("colorpicker").value;
+            document.getElementById("para").style.backgroundColor=color;
+                // OR
+            // let color=document.getElementById("colorPicker")
+            // document.getElementById("mypara").style.backgroundColor=color.value;
+
+        }
+
+        function changeColor(){
+            document.getElementById("para").style.backgroundColor="black";
+            document.getElementById("para").style.color="white";
+        }
+
+        function changeColor2(){
+            document.getElementById("para").style.backgroundColor="red";
+            document.getElementById("para").style.color="green";  //text color
+        }
+        
+        // by selecting width
+    function applySize(){
+        let w = document.getElementById("rangeWidth").value;
+        let h = document.getElementById("rangeHeight").value;
+
+        let box = document.getElementById("mydiv");
+
+        box.style.width = w + "px";
+        box.style.height = h + "px";
+    }
+</script>
+</body>
+</html>

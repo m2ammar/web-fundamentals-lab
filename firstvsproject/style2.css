@@ -1,0 +1,10 @@
+body{
+    background-color: blueviolet;
+    border: 1px solid black;
+}
+#contactBtn:hover{
+    color: aqua;
+}
+h1{
+    color: yellowgreen;
+}

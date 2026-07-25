@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Gallery</title>
+    <link rel="stylesheet" href="photo-gallery-filterable.css">
+</head>
+<body>
+
+<div class="page">
+    <div class="Header">
+        <img src="image/images.png" width="40" height="40">
+        <h1>Professional Photo Gallery</h1>
+        <p>Welcome, User!</p>
+    </div>
+
+    <div class="container">
+        <div class="sidebar">
+            <h2>Navigation Menu</h2>
+            <ul>
+    <li onclick="filterImages('all')">Multi Images</li>
+    <li onclick="filterImages('cars')">Cars</li>
+    <li onclick="filterImages('bikes')">Bikes</li>
+    <li onclick="filterImages('lion')">Lion</li>
+    <li onclick="filterImages('aesthetic')">Aesthetics</li>
+</ul>
+
+        </div>
+
+        <div class="menu">
+            <h2>Featured Photographs</h2>
+
+            <div class="featured-box">
+                <div class="image-box">
+                    <button id="prev" class="prev-btn">‹ Previous</button>
+                    <img id="photo" src="" alt="photo">
+                </div>
+
+                <div class="content-box">
+                    <h3 id="title"></h3>
+                    <p id="description"></p>
+                    <button id="next" class="next-btn">Next ›</button>
+                </div>
+            </div>
+
+            <p id="counter" class="counter"></p>
+        </div>
+    </div>
+
+    <footer class="footer">
+        © 2024 Professional Photo Gallery. All rights reserved
+    </footer>
+</div>
+
+<script>
+const photos = [
+    { src:"image/download (1).jpeg", title:"Parrot", category:"animal",
+      desc:"A colorful parrot captured in a calm natural environment." },
+
+    { src:"image/download (2).jpeg", title:"Whispers of the Wild", category:"nature",
+      desc:"Green landscapes glowing under soft sunlight and fresh air." },
+
+    { src:"image/download (3).jpeg", title:"Village Sentinel", category:"nature",
+      desc:"An old tree standing strong in the heart of a peaceful village." },
+
+    { src:"image/download (4).jpeg", title:"Nature", category:"nature",
+      desc:"Nature expressing beauty through light, color, and motion." },
+
+    { src:"image/download (5).jpeg", title:"Flowers", category:"nature",
+      desc:"Fresh flowers blooming gracefully under the open sky." },
+
+    { src:"image/download (6).jpeg", title:"Aesthetic", category:"aesthetic",
+      desc:"Aesthetic visuals creating a calm and artistic mood." },
+
+    { src:"image/download.jpeg", title:"Elephant", category:"animal",
+      desc:"A majestic elephant symbolizing strength and wisdom." },
+
+    { src:"image/pic1.webp", title:"Beautiful Sky", category:"nature",
+      desc:"A wide sky painted with clouds and peaceful tones." },
+
+    { src:"image/images.jpeg", title:"Nature Beauty", category:"nature",
+      desc:"Pure natural beauty captured in a single frame." },
+
+    { src:"image/download (7).jpeg", title:"Tiger", category:"lion",
+      desc:"A powerful tiger resting in its natural habitat." },
+
+    { src:"image/download (8).jpeg", title:"Tiger", category:"lion",
+      desc:"The fierce gaze of a tiger reflecting raw wildlife energy." },
+
+    { src:"image/download (9).jpeg", title:"Tiger", category:"lion",
+      desc:"A calm moment of a tiger surrounded by greenery." },
+
+    { src:"image/download (10).jpeg", title:"Tiger", category:"lion",
+      desc:"The elegance and strength of a tiger in nature." },
+
+    { src:"image/download (11).jpeg", title:"Car", category:"cars",
+      desc:"A stylish car designed for speed and performance." },
+
+    { src:"image/download (12).jpeg", title:"Car", category:"cars",
+      desc:"A modern car captured in motion." },
+
+    { src:"image/download (13).jpeg", title:"Car", category:"cars",
+      desc:"A powerful vehicle reflecting luxury and design." },
+
+    { src:"image/download (14).jpeg", title:"Aesthetic", category:"aesthetic",
+      desc:"Soft tones and artistic balance create calm visuals." },
+
+    { src:"image/download (15).jpeg", title:"Aesthetic", category:"aesthetic",
+      desc:"Minimal aesthetics with peaceful color tones." },
+
+    { src:"image/download (16).jpeg", title:"Aesthetic", category:"aesthetic",
+      desc:"An artistic frame full of visual harmony." },
+
+    { src:"image/images (1).jpeg", title:"Tiger", category:"lion",
+      desc:"Nature and wildlife captured in perfect harmony." },
+
+    { src:"image/images (2).jpeg", title:"Bike", category:"bikes",
+      desc:"A powerful bike built for speed and adventure." },
+
+    { src:"image/images (3).jpeg", title:"Bike", category:"bikes",
+      desc:"A bike representing freedom and travel." },
+
+    { src:"image/images (4).jpeg", title:"Cycle", category:"bikes",
+      desc:"A cycle captured in a calm outdoor setting." }
+];
+
+let filteredPhotos = [...photos];
+let index = 0;
+
+const photo = document.getElementById("photo");
+const title = document.getElementById("title");
+const description = document.getElementById("description");
+const counter = document.getElementById("counter");
+
+function update() {
+    photo.src = filteredPhotos[index].src;
+    title.innerText = filteredPhotos[index].title;
+    description.innerText = filteredPhotos[index].desc;
+    counter.innerText = `Image ${index + 1} of ${filteredPhotos.length}`;
+}
+
+document.getElementById("next").onclick = () => {
+    index = (index + 1) % filteredPhotos.length;
+    update();
+};
+
+document.getElementById("prev").onclick = () => {
+    index = (index - 1 + filteredPhotos.length) % filteredPhotos.length;
+    update();
+};
+
+function filterImages(category) {
+    index = 0;
+    if (category === "all") {
+        filteredPhotos = [...photos];
+    } else {
+        filteredPhotos = photos.filter(p => p.category === category);
+    }
+    update();
+}
+update();
+
+</script>
+
+</body>
+</html>
