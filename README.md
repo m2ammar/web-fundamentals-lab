@@ -80,10 +80,6 @@ Three small, focused JavaScript exercises:
 ### `dom-manipulation-basics`
 Covers `getElementById`, `.innerHTML`, `.style`, a color picker, and range-slider-based resizing of a `<div>`.
 
-**Screenshot:**
-
-<!-- PASTE SCREENSHOT HERE -->
-
 ### `interactive-css-styler`
 A live CSS playground — sliders and color pickers control a box's background, border, radius, size, and shadow in real time.
 
@@ -95,9 +91,6 @@ A live CSS playground — sliders and color pickers control a box's background, 
 ### `button-color-toggle`
 A single button that cycles through three background colors on click.
 
-**Screenshot:**
-
-<!-- PASTE SCREENSHOT HERE -->
 
 ---
 
@@ -115,10 +108,6 @@ A single button that cycles through three background colors on click.
 
 ### `css-positioning-demo`
 Demonstrates `position: absolute` / `relative`, plus centering an element with `transform: translate(-50%, -50%)`.
-
-**Screenshot:**
-
-<!-- PASTE SCREENSHOT HERE -->
 
 ### `photo-gallery-filterable`
 An expanded photo gallery (23 images) with a category filter sidebar (Cars, Bikes, Lion, Aesthetics) alongside Previous/Next navigation.
